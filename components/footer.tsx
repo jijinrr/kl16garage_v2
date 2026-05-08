@@ -61,6 +61,7 @@ export function Footer() {
                 width={120}
                 height={120}
                 className="object-contain rounded-lg"
+                style={{ width: "auto", height: "120px" }}
               />
             </button>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
@@ -127,14 +128,13 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#D50000] mt-1 shrink-0" />
                 <span className="text-white/60 text-sm">
-                  KL16 Industrial Park,<br />
-                  Kuala Lumpur, Malaysia
+                   Kadakkavoor, Kerala 695306<br />
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#D50000] shrink-0" />
                 <a href="tel:+60123456789" className="text-white/60 text-sm hover:text-[#D50000] transition-colors">
-                  +60 12-345 6789
+                  +9 71585903788
                 </a>
               </li>
               <li className="flex items-center gap-3">

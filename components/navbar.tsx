@@ -99,7 +99,7 @@ export function Navbar() {
                 className="flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#D50000]" />
-                <span>+60 12-345 6789</span>
+                <span>+9 71585903788</span>
               </a>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
@@ -161,7 +161,7 @@ export function Navbar() {
                     className="flex items-center gap-2 text-white/70 text-lg"
                   >
                     <Phone className="w-5 h-5 text-[#D50000]" />
-                    <span>+60 12-345 6789</span>
+                    <span>+9 71585903788</span>
                   </a>
                   <Button 
                     onClick={() => scrollToSection("#contact")}

@@ -4,8 +4,24 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Sparkles } from "lucide-react"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+
+type Particle = { left: number; top: number; duration: number; delay: number }
 
 export function Hero() {
+  const [particles, setParticles] = useState<Particle[]>([])
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 15 }, () => ({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        duration: 3 + Math.random() * 2,
+        delay: Math.random() * 2,
+      }))
+    )
+  }, [])
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
@@ -38,22 +54,22 @@ export function Hero() {
       </div>
 
       {/* Floating particles */}
-      {[...Array(15)].map((_, i) => (
+      {particles.map((p, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-[#D50000] rounded-full"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${p.left}%`,
+            top: `${p.top}%`,
           }}
           animate={{
             y: [0, -30, 0],
             opacity: [0.2, 0.8, 0.2],
           }}
           transition={{
-            duration: 3 + Math.random() * 2,
+            duration: p.duration,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: p.delay,
           }}
         />
       ))}

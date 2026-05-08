@@ -1,13 +1,27 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, Calendar, MessageCircle } from "lucide-react"
+
+type Particle = { left: number; top: number; duration: number; delay: number }
 
 export function CTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const [particles, setParticles] = useState<Particle[]>([])
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 15 }, () => ({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        duration: 4 + Math.random() * 3,
+        delay: Math.random() * 2,
+      }))
+    )
+  }, [])
 
   const scrollToContact = () => {
     const element = document.querySelector("#contact")
@@ -31,22 +45,22 @@ export function CTA() {
         />
         
         {/* Floating particles */}
-        {[...Array(15)].map((_, i) => (
+        {particles.map((p, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-[#D50000]/50 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${p.left}%`,
+              top: `${p.top}%`,
             }}
             animate={{
               y: [0, -50, 0],
               opacity: [0.2, 0.8, 0.2],
             }}
             transition={{
-              duration: 4 + Math.random() * 3,
+              duration: p.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: p.delay,
             }}
           />
         ))}
@@ -146,7 +160,7 @@ export function CTA() {
               className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
             >
               <Phone className="w-5 h-5 text-[#D50000]" />
-              <span>+60 12-345 6789</span>
+              <span>+9 71585903788</span>
             </a>
           </motion.div>
 

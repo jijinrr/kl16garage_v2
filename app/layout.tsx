@@ -21,21 +21,8 @@ export const metadata: Metadata = {
   keywords: ['car detailing', 'bike detailing', 'ceramic coating', 'PPF', 'paint correction', 'KL16GARAGE', 'Kuala Lumpur', 'Malaysia'],
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/logo.jpeg',
+    apple: '/images/logo.jpeg',
   },
   openGraph: {
     title: 'KL16GARAGE & INFINITY DETAILING STUDIO',
