@@ -54,18 +54,39 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <button onClick={() => scrollToSection("#home")} className="inline-block mb-6">
+            {/* Main company: Reem & Co */}
+            <button onClick={() => scrollToSection("#home")} className="inline-block mb-2">
+              <Image
+                src="/images/reem-co-logo.png"
+                alt="Reem & Co Logo"
+                width={160}
+                height={113}
+                className="object-contain rounded-lg"
+                style={{ width: "auto", height: "100px" }}
+              />
+            </button>
+            {/* Divider */}
+            <div className="flex items-center gap-3 my-3">
+              <div className="h-px flex-1 bg-white/20" />
+              <span className="text-xs uppercase tracking-widest" style={{ color: "#C9A84C" }}>presents</span>
+              <div className="h-px flex-1 bg-white/20" />
+            </div>
+            {/* Sub brand: KL16GARAGE */}
+            <button onClick={() => scrollToSection("#home")} className="inline-block mb-1">
               <Image
                 src="/images/logo.jpeg"
                 alt="KL16GARAGE Logo"
-                width={120}
-                height={120}
+                width={80}
+                height={80}
                 className="object-contain rounded-lg"
-                style={{ width: "auto", height: "120px" }}
+                style={{ width: "auto", height: "80px" }}
               />
             </button>
+            <p className="text-white/50 text-xs uppercase tracking-wider mb-4">
+              KL16GARAGE &amp; Infinity Detailing Studio
+            </p>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Premium car and bike detailing services. 
+              Premium car and bike detailing services.
               Driven by perfection, delivering excellence in every detail.
             </p>
             <div className="flex gap-4">
@@ -162,7 +183,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/40 text-sm">
-              &copy; {new Date().getFullYear()} KL16GARAGE & INFINITY DETAILING STUDIO. All rights reserved.
+              &copy; {new Date().getFullYear()}{" "}KL16GARAGE &amp; INFINITY DETAILING STUDIO by R &amp; Co. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-white/40 text-sm">
               <button onClick={() => scrollToSection("#home")} className="hover:text-[#D50000] transition-colors">Privacy Policy</button>
