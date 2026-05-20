@@ -146,7 +146,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("#services")}
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold px-8 py-6 text-lg rounded-sm uppercase tracking-wider transition-all duration-300 min-w-[200px]"
+              className="bg-white text-black border-white hover:bg-white/90 hover:border-white font-semibold px-8 py-6 text-lg rounded-sm uppercase tracking-wider transition-all duration-300 min-w-[200px]"
             >
               Explore Services
             </Button>

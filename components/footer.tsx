@@ -32,9 +32,9 @@ const services = [
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/kl16garage", label: "Instagram" },
   { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: MessageCircle, href: "https://wa.me/60123456789", label: "WhatsApp" },
+  { icon: MessageCircle, href: "https://wa.me/971585903788", label: "WhatsApp" },
 ]
 
 export function Footer() {
@@ -154,8 +154,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#D50000] shrink-0" />
-                <a href="tel:+60123456789" className="text-white/60 text-sm hover:text-[#D50000] transition-colors">
-                  +9 71585903788
+                <a href="tel:+971585903788" className="text-white/60 text-sm hover:text-[#D50000] transition-colors">
+                  +971 585903788
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -167,8 +167,8 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <MessageCircle className="w-5 h-5 text-[#D50000] shrink-0" />
                 <a 
-                  href="https://wa.me/60123456789" 
-                  target="_blank" 
+                  href="https://wa.me/971585903788"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 text-sm hover:text-[#D50000] transition-colors"
                 >
